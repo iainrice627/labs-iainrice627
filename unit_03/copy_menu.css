@@ -1,0 +1,36 @@
+ul {
+list-style-type:none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color:aquamarine
+
+
+}
+
+li {
+float: left;
+clear:both
+
+}
+
+li a {
+display:block;
+color:darkblue;
+text-align:center;
+padding: 14px 16px;
+text-decoration: none;
+
+}
+
+li a:hover {
+background-color:bisque
+
+}
+
+header nav ul li {
+clear: none;
+float: left;  /*if this is none the header words are on top of each other in different rows. if left they all join on row */
+
+
+}
