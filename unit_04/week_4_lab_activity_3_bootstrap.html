@@ -11,7 +11,7 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">   <!--Navigation bar is first of 3 sections-->
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -41,19 +41,77 @@
     
     <main>
     <div class="container">
-        <div class="row">
-          <div class="col-xl">
-            <img src="https://picsum.photos/200/300" class="img-fluid" alt="Responsive image"> <!-- this is to make the image work with bootstrap-->
+        <div class="row">    <!-- the second of three sections which is one row and will have two columns - a) a picture and b) heading and text-->
+          <div class="col-xl mt-5" >
+            <img src="https://picsum.photos/500/300" class="img-fluid" alt="Responsive image"style="width:500px;height:300px";> <!-- this is to make the image work with bootstrap-->
           </div>
-          <div class="col-sm">
-            <h1 class="text-center">Hello, world!</h1>
-            <p class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim dicta quam dolor inventore ad hic illum quos dolores neque nihil tempore et repellendus ullam rerum, tenetur quibusdam eligendi deserunt. Nam?</p>
-            <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, cumque ea voluptate iure suscipit nam earum accusantium, sit cupiditate voluptatum itaque. Voluptate dolorum nihil inventore dolores omnis. Odio, optio suscipit.</p>
+          <div class="col-lg mt-5">
+            <h1 class="text-align">Hello, world!</h1>
+            <p class="text-justify text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim dicta quam dolor inventore ad hic illum quos dolores neque nihil tempore et repellendus ullam rerum, tenetur quibusdam eligendi deserunt. Nam?</p>
+            <p class="text-justify text-muted mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, cumque ea voluptate iure suscipit nam earum accusantium, sit cupiditate voluptatum itaque. Voluptate dolorum nihil inventore dolores omnis. Odio, optio suscipit.</p>
           </div>
-          
         </div>
-      </div>
+    </div>
+    <div class="bg-light mt-5 mb-5">  <!-- insert margin for the row here.--> <!--insert background colour here-->
+      <div class="container">
+          <div class="row">  <!-- this is the third section. it will have 4 cards inside the row.-->
+
+              <div class="col">  <!-- first column/card start -->
+                <div class="card border-dark">  <!-- how to put a border around card-->
+                  <img src="https://picsum.photos/500/300" class="card-img-top" alt="random image">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div> <!-- end of first column-->
+
+              <div class="col"> <!-- second column/card-->
+                <div class="card">
+                  <img src="https://picsum.photos/500/300" class="card-img-top" alt="random image">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div> <!-- end of second column-->
+              
+
+                <div class="col"> <!-- third column/card-->
+                  <div class="card">
+                    <img src="https://picsum.photos/500/300" class="card-img-top" alt="random image">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div> <!--end of thrid column-->
+
+                <div class="col"> <!-- fourth column/card-->
+                  <div class="card">
+                    <img src="https://picsum.photos/500/300" class="card-img-top" alt="random image">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div> <!--end of fourth column-->
+
+
+          </div>  <!-- end of row for third section-->
+        </div> <!-- end of container for third section background colour is read-->
+    </div>
+
+      
+      
+    </div>
     </main>
+<!-- we now need the cards inserted underneath.-->
+
 
 
 
