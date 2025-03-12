@@ -1,0 +1,205 @@
+<!-- 
+ 
+how use javascript to interact without outisde services or applications and data of other websites.
+Application program interfaces
+
+restful web services - how work 
+JS obect N JSON - how we get any API informtion
+
+asynchronous communcication - hwo computers communiciate
+
+fetch - way to implemnent in js
+
+-----
+
+
+api - routines guidelines, rules for how to interact with other software.
+gets info, 
+
+web api - thinking about data want and how it given to us. 
+
+http web request message.
+
+
+soap approach - uses xml. very structured
+rest approach - more open to interpretation - more expermineta;. json - gives more freedom.
+its most lused in social media.
+
+so when would soap be used?
+
+need good understanding of java script to do this.
+
+------
+
+
+restful services.
+
+theory - way systems commincate.
+
+eg amaxon uses restful to create applications
+
+principles
+
+- seperation of client and server. data stored and clients access. assists with portability and scalabilty.
+        make sure clietn and server are seperate entitites
+        model view controller 
+        client only needs accestto resource uri that it needs to not whoel system. 
+        can pull our servers and pull out clients. or insert different ones and use the same api.
+
+
+- stateless - stateless interaction - server doesnt need to know what did previoulsy. no history in place. 
+        client will tell server everything needs to know to ghive corect infor eg login or i need acces to this user data
+        if statefull it beceomes process heacyv. better to off load processing to client.
+
+
+
+- cacheable - save any data from restful service, to wil be correct ofr now or long period of time. eg weather website - needs to chnage. not cacheable. browers needs to know what to keep and get rid of
+        need to declare what should be saved or deleted at set time.
+
+- uniform interfdace - very structered way to get acces to information.  
+        anythime interacting with api should be able to inte4ract with the same methods
+        common key words - eg get. 
+
+
+- layered system - hierachical structure in place. 
+        data being shown ot user, only seeing what need to see, dont need to know backend, eg data of server is in one country etc.
+        jsut care about the single layer they can access.
+
+
+
+rest maturity model- - richardson
+
+level 0 - 3 pyramid model.
+
+key terms - uri, verbs, HATEOS
+
+URI - web address. 
+
+can use verbs to acces diffewrnt site adress
+
+get post put delete.  
+can send stuff to api through post.  
+
+for now jsut using get to do stuff.
+
+HATEOAS - hyopermedia as the engine of apllication states.
+
+anythink that contains a link to other informaiton
+
+if we are pulling info from api we expect to get additional information from api that we can do sesnisbly fromt hat location.
+
+eg pulling back infor from admin departement. name of department etc  the hateos provides links which gives more infor abput how api works. eg emplyee links gives more infor about employees.
+
+
+
+check stack over flow to see if there are lots of questions about a particularly api.
+make sure the api has active giuthub community. the errors can be worked out already. 
+
+
+level 0 = uri and single verb ie get.
+
+level 1 - we can also use multiple uri   - we will proabbly just stay here at this level.
+
+level 2 - we can get multiple verbs to do things
+
+level 3 hateoas.
+
+
+
+check what level the api is at ie you wil focus on apis that are at level 0 and 1. not possible to use level 0 api in level 3 way. but can use level 3 api in level 0 way.
+
+------------------------------
+
+
+asychronous communication
+
+synchronous - happens in real life. immediate communication.  you listen and do nothing inbetweeen.
+asynchonous - not happening in real time - ie emails.  deopends on whther someone sees it. you do thingsi n between waiting for repsonse. 
+
+sychronpoue exapmple -clinet - sends request, waits until server sends repsonse.
+asyncrhonpue - client sends reuest - confirm the arrival then later send repsonse and the server sends confirmation and ewaits againto send other inofrmation.
+
+these both have places so need to kwo when to use them,
+
+eg email would be bad in sychronous.
+
+the request response que. 
+
+12 stages of communciation between serviers client and ques.  trying to reduce computation. 
+
+it is implentaed in JS using Js promises
+
+return value - yes you wil get this inofrmation or no not get this informaiotn. client can then do other thigns knowing soemthing will arrive or not. 
+success call back  or failure call back
+
+PROMOSES - see JS opage
+
+-------
+JSON
+
+keyu features - objects, arrays values (remmerb key value pairs.)
+
+objects
+
+unordered set of key value pairs
+
+{Key:Value}
+
+use comman between objects
+
+{Key:Value},{Key:Value}
+
+aarays ordered collections of vlauies
+
+
+{Key:[{Value},{Value}]}
+
+
+
+---
+
+information can only be sent to us as text. can convert to json format. 
+
+eg we have json objects in json file (look at early lessons for example)
+
+in the arrays you can see more information - ehg description url within an object called person.
+
+use JSON as a method to commuicate with servers. thje main sytax/language we see.
+
+need to take it and use it in our services.
+
+------------
+
+using fetch API
+
+fetch ()
+
+its built into JS.  works on idea of promises
+
+xml http request method.  
+
+modern web browsers use fetch. not supported in older browsers. can i use service can hlep you figure out what works.
+
+how does fetch work?
+
+--------------------------
+
+
+to put into action
+
+create html and construct the elements
+
+eg title. using cards so need elements for the bootstrap card code to style. 
+
+can you remmebers
+
+div eelemnt 
+
+
+
+
+
+
+
+
+-->

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>
+                </ul>
+                <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            </div>
+        </nav>
+
+
+    <div class = "container">
+            <div class = "row mt-5">
+                <div >  <!--class = "col-1"-->
+                    <h1>Staff Page</h1>
+                    <h2>Meet our Staff</h2>
+                </div>
+            </div>
+    
+        <div id = staff class = "row mt-5"></div> <!--  the plan is to use one row to contain columns and each column witll have a card. we want each user to appear in a column by themselves.-->
+    
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+
+
+    <script>
+
+        // create helper functions
+
+        function createNode(element){
+            return document.createElement(element);
+        }
+
+        function append(parent, el){
+            return parent.appendChild(el);
+        }
+
+        //declare the variables/make into objects so we know what this div is. choosing const becasue we dont intend to change. could use var if we wanted to change it.
+
+        const staffContainer = document.getElementById('staff');
+        const url = 'https://randomuser.me/api/?results=12'  //  we want another variable which is our url whwre we are getting all our information from. is this a link - why make an object with value of a link?
+
+        // pull information from api and start to play
+
+        fetch(url)  // get a website url i want to use. this is linked about to a webpage with json data but is a html file.  
+            .then((resp) => resp.json())   // then take response and convert to json.
+            .then(function(data)  // then take as function with data getting and call it data,  all the stuff now in the purple {} will be what we do with this json data.
+            {                        // want to iterate through each htnml element and append the data from json into them. 
+        console.log(data);  // this will show the objects you have gotten from the url and they are now dispalying 10 array lists with all their info inside.
+                var staff = data.results;   // using results casue in console can see what they are called. 
+                return staff.map(function(staff) {  // staff is now valued with all the things form website - it equals data which accesses 'results' - rsults is the arrays pulled into website, by fetch command. staff map is going to iteratre through the rows of data in results. and now its a function called staff.
+                    var img = createNode('img');    // create variables of images - need to create a lement for img using the function createNod above. 
+                    var h5 = createNode('h5');// create variable of h5 
+                    var p = createNode('p'); //create variable of p .  hwy '' with same variabkle name in brackets.
+                            // now we can use these elements. 
+                            // we need to take image and dispaly it.  look at api information in the console of html and see how it is,
+                    var column = createNode('div');         // to make the cards we need to create a new div. we use createNode fiucntion becuase this is creating elements. and div is an element.            
+                    var card =  createNode('card');                            // i want a card now, but becasue in bootstrap it has to be in a div we need to make the div here.
+                    var cardBody = createNode("cardBody");                                         // in bootstrap there is also a a div called calss card-body so need to make this.
+                    
+                    
+                    cardBody.classList.add("cardBody");      // this has carlist not classllist why??this was typo by instructor. 
+                    card.classList.add("card"); //u this u was creating the error below. but why saying 130 and 141 if here?  The u at the end of that line is not recognized, and JavaScript throws the error here because u is undefined and doesn't belong in that statement.
+                    card.classList.add("mt-3")
+                    column.classList.add("col-3");     // got this from this website https://developer.mozilla.org/en-US/docs/Web/API/Element/classList.  put in column becasue the variable is called column and put in col-4 because it will take the column and do stuff?? by making thsi col-4 it allowed 3 photos acroos. by calling it col-3 it allowed 4
+                    img.src = staff.picture.large; // these picture.medium used in the console and is part of json data. so re using it. 
+                    img.classList.add('card-img-top');  // this is to get the image to be added to the card image element space using the class list(?)
+                    h5.innerHTML = staff.name.first + " " + staff.name.last;  // want to put name of person into h5, will use innerHTML of h5.  all the data is in the value called staff. it reads as result sin concole of html. so start with staff
+                                                                    // this has made soemthing called h5 accessing innerHTNL and is is now putting in the above. 
+                    h5.classList.add('card-title');// in here we want to add the thing for the card.  if staf name is going to be card tittle.  we dont make a new div or new h5 for 'card-title' becasue we already have it for h5. we just need to get it to appear in card.
+                    p.innerHTML = staff.email;
+                    p.classList.add('card-text');  // doing the same as h5 for the text, which we want yto appear in the card.
+
+                    
+
+                    // // this was the orginal attmep that put these items anyhwere
+                    // append(staffContainer, h5);// need to do the work of appending the staff names to page. this then made the names appear above pictures. and now ordered in list. not in a row.
+                    // append(staffContainer, img);   // now need to append using our append function, this image to our div or card?.  the call out of append function using staffcontaier variable made which gets the id of the div called staff. the other argmumebnt passing in is img. which will be the thing called img in json. it was created as a varibale a few lines earlir. before that the map will go through all json and get the images for each record. how we kow to get an image,
+                    // append(staffContainer, p);
+
+                    // now will make these items append to column rather than staffContainer.  need to also append the card to the sites, and do so in the same way one at a time.
+                    
+                    append(card, img);    // this will attach image to the card
+                    append(cardBody, h5); // this will attch h5 to the card body this was card-body
+                    append(cardBody, p);  // this will attach p to the card body this was card-body
+                    append(card, cardBody);  // append card body to the card# this was card-body but we called it carBody above.
+                    append(column, card);   //append card to the column
+
+
+                    append(column, h5);// need to do the work of appending the staff names to page. this then made the names appear above pictures. and now ordered in list. not in a row.
+                    append(column, img);   // now need to append using our append function, this image to our div or card?.  the call out of append function using staffcontaier variable made which gets the id of the div called staff. the other argmumebnt passing in is img. which will be the thing called img in json. it was created as a varibale a few lines earlir. before that the map will go through all json and get the images for each record. how we kow to get an image,
+                    append(column, p);
+                    append(staffContainer, column);  // now the imagesa re in a grod layout with 3 images in a row.
+                })
+                })
+            .catch(function(error) { // creating a catch that takes a fucntion called error
+                console.log(error);   // when an error it will writ ein the console log of html error? or take 'error' what is this then?
+                });  // the ; closes this.
+
+    </script>
+</html>
+
+<!-- an error appeared TypeError: Cannot read properties of undefined (reading 'add')
+    at week_9_video_activity.html:141:39
+    at Array.map (<anonymous>)
+    at week_9_video_activity.html:130:30
+    
+    this means you cannot add something to something that doesnt exist hwich means spelling mistake maybe.
+    In JavaScript, trying to access properties or methods on undefined causes this error.
+    The error happened at line 141, character 39, in your week_9_video_activity.html file.
+
+    was this eerro caused by classlist error type in line 103? yes but new error
+
+    ReferenceError: u is not defined
+    at week_9_video_activity.html:142:49  it encounters the stray u on the line mentioned earlier (line 142).
+    at Array.map (<anonymous>)  This indicates that the error occurred within the map() method. In your code, the map() function is being used to iterate over the array staff, which is the result of fetching data from the API. The map() method executes the function you pass to it (in this case, the one using staff) for each element in the arra
+    at week_9_video_activity.html:130:30 Line 130 is where the map() method starts to iterate over the staff array. This is the function that is called to process each element.
+
+
+
+    -->
+
+
