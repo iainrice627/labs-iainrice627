@@ -1,0 +1,21 @@
+java script
+
+
+really struggling 
+
+
+stuck trying to make cointainers change individually when they are touched by a mouse or mouse leaves.
+
+
+ive been restricting myself to the examples given in labs but its not working. I need to re-do the videos and do it along with computer. 
+
+I need to investigate 
+
+varible intialising and why I need them
+I need to think about for loop to do the job
+
+
+the issue is each continaer is unique qith separate colours. cant mass change them easily. 
+
+so trying to avoid repeating a formula for each one. 
+

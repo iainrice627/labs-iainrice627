@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <!-- <script src="myscript.js"></script>  -->
+<body>
+  <h1 id="id1">My Heading 1</h1>
+    <button type="button" onclick="document.getElementById('id1').style.color = 'red';">Click Me!</button>
+        <button type="button" onclick="go()">Click Me Too!</button>
+        <button type="button" onclick="goAgain()"> Click Me for yellow! </button> 
+        <button type="button" id="orangeButton"> Click Me for orange! </button>
+
+    
+  
+</body>
+
+<script>
+
+// this function is to change element id1 color to yellow
+    function goAgain() {
+        document.getElementById('id1').style.color = 'yellow';
+    }
+    
+
+// this function is to change element id1 color to blue    
+    function go() {
+        document.getElementById('id1').style.color = 'blue';
+    }
+
+
+
+    document.getElementById("orangeButton").addEventListener("click", orangeButton);
+    
+
+// this will chnage header text to mean id1. It assigns the element with the ID id1 to the variable headerText.
+
+    let headerText = document.getElementById('id1');
+    
+    
+// this function is to chnage header text to colour orange.  
+    function orangeButton() {
+        headerText.style.color = 'orange';
+        }
+
+
+
+</script>
+
+
+</html>
+
+<!-- this all works now
+  -->
+<!-- In telecommunications networks, a node (Latin: nodus, ‘knot’) is either a redistribution point or a communication endpoint.-->
+
+
+<!-- THERE IS ONLY ONE ELEMENT IN THIS. 
+ 
+THE BUTTONS EXIST AND ARE LEMENTS BUT THE FUCNTIONS ARE REFERRING TO ONLY ONE ELEMENT. THE BUTTON IS PRESSED. FUNCTION HAPPENS REFOERING TO 1 ELEMENT. 
+NEXT BUTTON PRESSED AND THE FUNCTION MAKES THAT SAME ELEMENT CHANGE. ITS WHY THERE CAN BE MULTIPLE FUNCTIONS WITH ID1 BECAUSE THEY ALL SELECTING 1 ELEMENT. -->

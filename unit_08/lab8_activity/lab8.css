@@ -1,0 +1,27 @@
+#directory {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .staff {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  .staff h2 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+  }
+  .staff p {
+    margin: 5px 0;
+    color: #555;
+  }
+
+
+
+
+  /* Explanation
+Flexbox Layout: The #directory container uses flex-direction: column to stack each .staff entry vertically.
+Staff Card Style: Each .staff entry is styled with borders, padding, and background colour for a card-like appearance. */

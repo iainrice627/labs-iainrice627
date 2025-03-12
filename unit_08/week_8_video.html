@@ -1,0 +1,137 @@
+<!-- introduction to jQuery and json -->
+
+
+<!-- jQuery is a javascript library 
+ 
+JS is a programming language
+jq is a js library, built on top of js
+
+can access and create DOM faster than JS
+
+must include Jquery in URL header of the webpage - what does this look like.
+but JS has been built into browsers now.  this means that jquery is like a css framework you link for. it is somewhere else.
+
+
+jquery 
+
+to find html elements by ID - use - $("#myID)"); rather than document.getElementByID("myID");
+
+html tag - use - $("a");
+
+
+
+find nested HTML elements by tag - in js need to use two lines for nested element.
+
+  eg let x = document.getElementbyTagName("main");
+            let y = x.getElementsbyTagName("p");
+
+do you have nested elements in your html. what does an html nested element look like?
+
+elements can contain other elements. Elements inside of other elements are called nested elements. https://simpledev.io/lesson/nested-elements-html-1/
+
+<ol>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ol>
+
+
+see if you can figure out lab 8 using this.
+
+the jquery = $("main p");   main is the parent. but can put anything in eg class etc, as long as it is the parent.
+
+
+jquery does not replace JS.  it just makes it simpler
+
+
+------------------------
+
+JSON
+
+main way to interacte with API - whaty isd API?
+
+Objects
+
+arrays
+
+values
+
+json combines them to be readinble by humans and machiness
+
+object = unordered set of key value pairs.
+
+begins {}
+
+{ KEY : VALUE }
+{ KEY : VALUE , KEY : VALUE} if want to add more than one key value pairs.
+
+arrays
+
+[ VALUE ]
+
+[ VALUE, VALUE ]
+
+VALUES
+
+"STRING"
+NUMBER
+TRUE/FALSE
+NULL
+ARRAY
+
+YOU CAN HAVE A NUMBER SHOWN IN A STRING OR TRUE AND FALSE
+
+--#
+
+main sytax we use to get anything from a webservice
+
+it is text and then trasnlate into json format
+
+example
+
+a JS object  "Sammy" with some profile information
+
+{"sammy" : {"username" : "SammyShark","locatoin" : "indian ocean","online" : "True"," followers" : 987}    }         
+
+   KEY   : VALUE 
+   
+   But here thee value is multiple values
+
+            { KEY : VALUE, KEY: VALUE, KEY:VALUE, KEY:VALUE, KEY:VALUE}
+SO ITS
+
+{KEY :  {KEY:VALUE, KEY:VALUE, KEY:VALUE, KEY:VALUE, KEY:VALUE}}
+
+
+EASH OBJECT IS A JSON OBJECT
+
+{
+object 1
+ "sammy" : {
+    "username" : "SammyShark",      STRING
+    "locatoin" : "indian ocean",    STRING
+    "online" : "True",              BOOLEAN
+    " followers" : 987              NUMBER 
+ }
+object 2
+"BOB" : {
+    "username" : "BOBShark",      STRING
+    "locatoin" : "indian ocean",    STRING
+    "online" : "FASLE",              BOOLEAN
+    " followers" : 1987              NUMBER 
+    "WEBSITES": [{"description" :"work", "URL" : "https:// address.com/"}, {description" :"work", "URL" : "https:// address.com/"}]
+       KEY    : VALUE
+
+       KEY    : [ { KEY : VALUE, KEY: VALUE} , {KEY:VALUE,KEY:VALUE} ]  in this array, the list is the value with multiple things in it. each thing is contained in {} with their own multiple things.
+
+       ie one webstie has two things, but there are two webites in the array.
+        website is the object.
+        
+    }
+
+}
+
+
+
+
+-->

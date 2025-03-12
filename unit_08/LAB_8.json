@@ -1,0 +1,34 @@
+// {
+//     "Iain": {
+//         "user_name": "iain123",
+//         "age": "40",
+//         "email": "iain@msn.com",
+//         "Grades": [
+//             {
+//                 "Chemistry": "A"
+//             },
+//             {
+//                 "Mathematics": "B"
+//             },
+//             {
+//                 "Geology": "C"
+//             }
+//         ],
+//         "gender": "male",
+//         "sign up": "TRUE"
+//     }
+// }
+
+
+
+{
+    "name": "Alice Johnson",
+    "age": 32,
+    "isEmployee": true,
+    "skills": ["HTML", "CSS", "JavaScript"],
+    "contact": {
+      "email": "alice.johnson@example.com",
+      "phone": "555-0123"
+    }
+  }
+  

@@ -1,0 +1,88 @@
+
+/*this is how yopu create grid structures without using css framworks.*/
+
+
+.grid-container1{
+    display:grid;
+    grid-template-columns: repeat(1, 1fr) ;
+    gap:20px ;  
+    /* margin-bottom: -5px; */
+    padding: 20px;
+}
+
+.grid-container1 > div{
+    padding: 20px;
+    text-align: center;
+} 
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* number of columns */  /*you must not have space between repeat and () or it wont work.*/
+    gap: 20px;  /* Space between the boxes */
+    margin-top: 20px;
+    padding:20x;
+    /* margin-bottom: 5; */
+
+}
+
+.grid-container2 > div {
+    padding: 20px;
+    text-align: center;
+}
+
+/*this is how you colour the grid and coloumns or rows in your grid. by nameing each column and then give attributes. beware col-1 is something bootstrap uses. */
+
+
+.col-1 {
+    background-color: chartreuse ;
+    height: 200px;
+    width:auto
+}
+
+.col-2 {
+    background-color: rgb(243, 12, 27) ;
+    height: 200px;
+    width:auto
+}
+.col-3 {
+    background-color: rgb(23, 16, 236) ;
+    height: 200px;
+    width:auto
+}
+.col-4 {
+    background-color: rgb(9, 174, 144) ;
+    height: 200px;
+    width:auto
+}
+.col-5 {
+    background-color: rgb(220, 11, 167) ;
+    height: 200px;
+    width:auto
+}
+.col-6 {
+    background-color: rgb(232, 249, 6) ;
+    height: 200px;
+    width:auto
+}
+.col-7 {
+    background-color: rgb(127, 130, 124) ;
+    height: 200px;
+    width:auto
+}
+.col-8 {
+    background-color: rgb(235, 161, 13) ;
+    height: 200px;
+    width:auto
+} 
+.grid-container1 {      /*you originally had this as div- but this made all the divs have this background, so looked like one was overlapping but it wasnt. its was because all were blue!*/
+    background-color: aqua;
+    height: 200px;
+    width: auto;
+    
+    /* position: relative; */
+    /* color:black ; */
+}
+
+
+/* The div elements have position: relative;, which can cause them to overlap if their positions are not explicitly defined.
+Grid Containers: The two grid containers (grid-container1 and grid-container2) are not separated by any margin or padding, causing them to overlap. */

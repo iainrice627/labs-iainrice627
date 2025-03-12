@@ -1,0 +1,48 @@
+<script>
+
+    document.addEventListener("mouseover", onmouseover);     // this is causing the div 1 box to change to orange when the mouse touches any part of the webpage.
+
+    function onmouseover() {
+        document.getElementById('id1').style.backgroundColor = 'orange';   // this part remains as document. if chnaged to element nothing happens.  if both documents words changes to element nothing happens. 
+        document.getElementsById('id1')[0].style.backgroundColor = 'orange'; 
+
+    }
+
+
+    document.addEventListener("mouseout", outmouseover);
+
+    function outmouseover(){
+        document.getElementById('id1').style.backgroundColor = 'blue';
+        document.getElementsById('id1')[0].style.backgroundColor = 'blue';  // this needed a plural getElements rather than get Element. becasue there are multiple elements you need an array so insert [0] to acces the first element.
+    }
+
+
+</script>
+
+
+this will change the colour of grid container 1 div 1 back a forth in colours but the next row will not change. 
+applying Id1 to various tags in grid-container2 or the divs within it eg col-1 and col-2, does not work.
+
+why does applying Id1 to various tags in grid-container2 or the divs within it eg col-1 and col-2, not work?
+
+
+
+try this 
+
+
+document.getElementById('id1').addEventListener("mouseover", function() {this.style.backgroundColor = 'orange';});
+        document.getElementById('id1').addEventListener("mouseout", function() {this.style.backgroundColor = 'blue';});
+
+
+
+
+        document.getElementsByClassName('grid-container2')[0].addEventListener("mouseover", function(event) {
+            if (event.target !== this) {
+                event.target.style.backgroundColor = 'orange';
+            }
+        });
+        document.getElementsByClassName('grid-container2')[0].addEventListener("mouseout", function(event) {
+            if (event.target !== this) {
+                event.target.style.backgroundColor = 'blue';
+            }
+        });

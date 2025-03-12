@@ -1,0 +1,71 @@
+javajscript activity 1
+
+
+trying to change colour of divs with mouseover function.
+
+
+	document.getElementById("id1").document.addEventListener("mouseover", onmouseover);   
+
+    	function onmouseover() {
+        	document.getElementById('id1').style.backgroundColor = 'orange';  
+    	}
+
+
+	document.getElementById("id1").document.addEventListener("mouseout", outmouseover);
+
+    	function outmouseover(){
+        	document.getElementById('id1').style.backgroundColor = 'blue';
+          
+    	}  
+
+
+
+EEROR - trying to use the addEventListener method on an object that is undefined.
+
+
+you need to define the object in javascript
+
+	const id1 = document.getElementById('id1');
+
+
+you then need to add the event to the thing you want to change. the mistake you made was to assign document, because you wanted just the element. 
+
+	const id1 = document.getElementById('id1');id1.addEventListener()
+
+
+you then need to say what you want to happen in the () next to event listener. i.e. a function
+
+	const id1 = document.getElementById("id1");id1.addEventListener("mouseover", onmouseover); 
+
+
+the function is then written, we are calling in onmouseover but this also something else. could be anything.
+
+	function onmouseover()
+
+
+then write in the code for what is going to happen.
+
+		{
+		document.getElementById('id1').style.backgroundColor = 'orange';
+		}
+
+
+it will get id1, access(.), the background colour, make it(=) oranage. 
+
+ 
+//each of the 8 need their own id = id2, id3, id4----> id9.
+
+//i could copy and past the above and assign new code to each.
+
+//what needs to happen
+    // each id needs to be defined. with 
+    //  const x = document.getElementById("x");x.addEventListner("mouseover", on mouseover);
+
+// which is the value that needs to change. x.  it needs to increment becasye in html each div will be incrementating 1-8.
+
+const x = ["id1","id2","id3","id4","id5","id6","id7","id8"];
+
+
+
+
+

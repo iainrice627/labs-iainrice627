@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="week_7_lab_style_activity_1.css"> -->
+    <title>Week 7 Lab activity 1</title>
+
+    <style>
+
+        .grid-container1{
+            display:grid;
+            grid-template-columns: repeat(1, 1fr) ;
+            gap:20px ;  
+            /* margin-bottom: -5px; */
+            padding: 20px;
+        }
+
+        .grid-container1 > div{
+            padding: 20px;
+            text-align: center;
+        } 
+
+        .grid-container2 {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr); /* number of columns */  /*you must not have space between repeat and () or it wont work.*/
+            gap: 20px;  /* Space between the boxes */
+            margin-top: 20px;
+            padding:20x;
+            /* margin-bottom: 5; */
+
+        }
+
+        .grid-container2 > div {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /*this is how you colour the grid and coloumns or rows in your grid. by nameing each column and then give attributes. beware col-1 is something bootstrap uses. */
+
+
+        .col-1 {
+            background-color: chartreuse ;
+            height: 200px;
+            width:auto
+        }
+
+        .col-2 {
+            background-color: rgb(243, 12, 27) ;
+            height: 200px;
+            width:auto
+        }
+        .col-3 {
+            background-color: rgb(23, 16, 236) ;
+            height: 200px;
+            width:auto
+        }
+        .col-4 {
+            background-color: rgb(9, 174, 144) ;
+            height: 200px;
+            width:auto
+        }
+        .col-5 {
+            background-color: rgb(220, 11, 167) ;
+            height: 200px;
+            width:auto
+        }
+        .col-6 {
+            background-color: rgb(232, 249, 6) ;
+            height: 200px;
+            width:auto
+        }
+        .col-7 {
+            background-color: rgb(127, 130, 124) ;
+            height: 200px;
+            width:auto
+        }
+        .col-8 {
+            background-color: rgb(235, 161, 13) ;
+            height: 200px;
+            width:auto
+        } 
+        .grid-container1 {      /*you originally had this as div- but this made all the divs have this background, so looked like one was overlapping but it wasnt. its was because all were blue!*/
+            background-color: aqua;
+            height: 200px;
+            width: auto;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    
+    <div  class = "grid-container1">
+        <div id="idmain"> 1 </div>
+    </div>
+
+    <div class = "grid-container2">
+        <div id="id1" class = "col-1"> 1 </div>
+        <div id="id2" class = "col-2"> 2 </div>
+        <div id="id3" class = "col-3"> 3 </div>
+        <div id="id4" class = "col-4"> 4 </div>
+        <div id="id5" class = "col-5"> 5 </div>
+        <div id="id6" class = "col-6"> 6 </div>
+        <div id="id7" class = "col-7"> 7 </div>
+        <div id="id8" class = "col-8"> 8 </div>
+    </div>
+
+<!-- 
+    <div id="id1" class = "grid-container1">
+        <div> 1 </div>
+    </div>
+
+    <div id="id1" class = "grid-container2">
+        <div class = "col-1"> 1 </div>
+        <div class = "col-2"> 2 </div>
+        <div class = "col-3"> 3 </div>
+        <div class = "col-4"> 4 </div>
+        <div class = "col-5"> 5 </div>
+        <div class = "col-6"> 6 </div>
+        <div class = "col-7"> 7 </div>
+        <div class = "col-8"> 8 </div>
+    </div> -->
+    
+</body>
+
+
+
+<script>
+
+// this is the code to make fisrt container change color when mouse goes over and off a div element.
+
+const idmain = document.getElementById("idmain");idmain.addEventListener("mouseover", onmouseovermain);   
+
+    function onmouseovermain() {
+        document.getElementById('idmain').style.backgroundColor = 'orange';   //getElementsByClassName returns a live HTMLCollection of all elements that have the specified class name. This collection is similar to an array, and you need to apply the style to each individual element within this collection.
+    }
+
+
+document.getElementById("idmain");idmain.addEventListener("mouseout", outmouseovermain);
+
+    function outmouseovermain(){
+        document.getElementById('idmain').style.backgroundColor = 'idmain';
+          
+    }          
+
+//----------------------------------------------------------------------------------------------
+
+
+const id1 = document.getElementById("id1");id1.addEventListener("mouseover", onmouseover1);   
+
+    function onmouseover1() {
+        document.getElementById('id1').style.backgroundColor = 'orange';   //getElementsByClassName returns a live HTMLCollection of all elements that have the specified class name. This collection is similar to an array, and you need to apply the style to each individual element within this collection.
+    }
+
+
+document.getElementById("id1");id1.addEventListener("mouseout", outmouseover1);
+
+    function outmouseover1(){
+        document.getElementById('id1').style.backgroundColor = 'chartreuse';
+          
+    }     
+
+//------------------------------------------------------------------
+
+const id2 = document.getElementById("id2");id2.addEventListener("mouseover", onmouseover2);   
+
+    function onmouseover2() {
+        document.getElementById('id2').style.backgroundColor = 'orange';   //getElementsByClassName returns a live HTMLCollection of all elements that have the specified class name. This collection is similar to an array, and you need to apply the style to each individual element within this collection.
+    }
+
+
+document.getElementById("id2");id2.addEventListener("mouseout", outmouseover2);
+
+    function outmouseover2(){
+        document.getElementById('id2').style.backgroundColor = 'rgb(243, 12, 27)';
+          
+    }     
+
+//------------------------------------------------------------------
+
+const id3 = document.getElementById("id3");id3.addEventListener("mouseover", onmouseover3);   
+
+    function onmouseover3() {
+        document.getElementById('id3').style.backgroundColor = 'orange';   //getElementsByClassName returns a live HTMLCollection of all elements that have the specified class name. This collection is similar to an array, and you need to apply the style to each individual element within this collection.
+    }
+
+
+document.getElementById("id3");id3.addEventListener("mouseout", outmouseover3);
+
+    function outmouseover3(){
+        document.getElementById('id3').style.backgroundColor = 'rgb(23, 16, 236)';
+          
+    }     
+
+//------------------------------------------------------------------
+
+const id4 = document.getElementById("id4");id4.addEventListener("mouseover", onmouseover4);   
+
+    function onmouseover4() {
+        document.getElementById('id4').style.backgroundColor = 'orange';   //getElementsByClassName returns a live HTMLCollection of all elements that have the specified class name. This collection is similar to an array, and you need to apply the style to each individual element within this collection.
+    }
+
+
+document.getElementById("id4");id4.addEventListener("mouseout", outmouseover4);
+
+    function outmouseover4(){
+        document.getElementById('id4').style.backgroundColor = 'rgb(9, 174, 144)';
+          
+    }     
+
+//------------------------------------------------------------------
+
+const id5 = document.getElementById("id5");id5.addEventListener("mouseover", onmouseover5);   
+
+    function onmouseover5() {
+        document.getElementById('id5').style.backgroundColor = 'orange';   //getElementsByClassName returns a live HTMLCollection of all elements that have the specified class name. This collection is similar to an array, and you need to apply the style to each individual element within this collection.
+    }
+
+
+document.getElementById("id5");id5.addEventListener("mouseout", outmouseover5);
+
+    function outmouseover5(){
+        document.getElementById('id5').style.backgroundColor = 'rgb(220, 11, 167)';
+          
+    }     
+
+//------------------------------------------------------------------
+
+const id6 = document.getElementById("id6");id6.addEventListener("mouseover", onmouseover6);   
+
+    function onmouseover6() {
+        document.getElementById('id6').style.backgroundColor = 'orange';   //getElementsByClassName returns a live HTMLCollection of all elements that have the specified class name. This collection is similar to an array, and you need to apply the style to each individual element within this collection.
+    }
+
+
+document.getElementById("id6");id6.addEventListener("mouseout", outmouseover6);
+
+    function outmouseover6(){
+        document.getElementById('id6').style.backgroundColor = 'rgb(232, 249, 6)';
+          
+    }     
+
+//------------------------------------------------------------------
+
+const id7 = document.getElementById("id7");id7.addEventListener("mouseover", onmouseover7);   
+
+    function onmouseover7() {
+        document.getElementById('id7').style.backgroundColor = 'orange';   //getElementsByClassName returns a live HTMLCollection of all elements that have the specified class name. This collection is similar to an array, and you need to apply the style to each individual element within this collection.
+    }
+
+
+document.getElementById("id7");id7.addEventListener("mouseout", outmouseover7);
+
+    function outmouseover7(){
+        document.getElementById('id7').style.backgroundColor = 'rgb(127, 130, 124)';
+          
+    }     
+//------------------------------------------------------------------
+
+const id8 = document.getElementById("id8");id8.addEventListener("mouseover", onmouseover8);   
+
+    function onmouseover8() {
+        document.getElementById('id8').style.backgroundColor = 'orange';   //getElementsByClassName returns a live HTMLCollection of all elements that have the specified class name. This collection is similar to an array, and you need to apply the style to each individual element within this collection.
+    }
+
+
+document.getElementById("id8");id8.addEventListener("mouseout", outmouseover8);
+
+    function outmouseover8(){
+        document.getElementById('id8').style.backgroundColor = 'rgb(235, 161, 13)';
+          
+    } 
+
+// this is the code to make the other 8 containers chnage colour individually when mouse goes over and off thir div element.
+
+//each of the 8 need their own id = id2, id3, id4----> id9.
+
+//i could copy and past the above and assign new code to each.
+
+//what needs to happen
+    // each id needs to be defined. with 
+    //  const x = document.getElementById("x");x.addEventListner("mouseover", on mouseover);
+
+// which is the value that needs to change. x.  it needs to increment becasye in html each div will be incrementating 1-8.
+
+
+
+
+</script>
+
+</html>
+
+<!--
+ 
+3. get JS to tell the boxes to change colour when mouse goes over.  figure out why the expample in lab was not working. figure out what mouse over is. figure out how to make this work correctlt. you are missing something. look at case sensitiy. -->
+
+
+
+<!-- Behavior of getElementById: When you use document.getElementById('id1'), it returns the first element it finds with that ID. If there are multiple elements with the same ID, only the first one in the document order will be selected. -->

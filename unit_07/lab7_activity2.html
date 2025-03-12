@@ -1,0 +1,165 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab 7 activity 2</title>
+    <link rel="stylesheet" href="lab7_activity2_style.css">
+</head>
+
+
+<body>
+
+<h1>Tip Calculator</h1>
+
+<form>
+    <label for="text">Enter Total Bill</label>
+    <input type ="text" id= "myInputBox"><br>     <!-- br lets it skip a line and no </input> close bracket. Why? the <input> element doesn't have any content inside it.therefore no closing tag.-->
+
+    <label for="Select Tip Preferences"></label>
+    <input type="radio" id="tip1" name="tipcal" value="5%">   <!-- you need the same 'name' for radio to function. -->
+    <label for="tip1">5%</label><br>
+    <input type="radio" id="tip2" name="tipcal" value="10%">
+    <label for="tip2">10%</label><br>
+    <input type="radio" id="tip3" name="tipcal" value="25%">
+    <label for="tip3">25%</label><br>
+
+<!--When you click this button, it should update the "Tip to Give" section with the calculated tip amount.-->
+
+<button type="button" value = "=" onclick="">Largest from 25% or £2+10%</button><br>  <!-- need a button with text Largest from 25% or £2 + 10%.    the tip calculator will choose the larger amount between two calculations:-->
+
+<label for ="text">Tip to Give</label><br>
+<!-- <input type ="text" id = "result">  this where the solution to calculation will appear -->
+<p id="result"></p>
+
+
+<!-- 
+
+solve() function in js. displays the result on the input text field.uses Math.js evaluate() function to evaluate the mathematical expression.
+clr() function is called, and it resets the value to empty.
+
+        25% of the total bill amount.
+        £2 plus 10% of the total bill amount.
+
+        For example, if your total bill amount is £20:
+            25% of £20 is £5.
+            £2 plus 10% of £20 is £2 + £2 = £4.
+            In this case, the calculator would select £5 as the tip because it is larger than £4.
+
+        If your total bill amount is £10:
+
+calculation1 = (tip choice% x total bill)
+calculation2 = (10% x total bill)+2
+
+if calcution1 is > calculation2 - then choose/print calulation1.
+
+
+25% of £10 is £2.50.
+£2 plus 10% of £10 is £2 + £1 = £3.
+Here, the calculator would select £3 as the tip because it is larger than £2.50.
+
+This option ensures that you always give a tip that is at least 25% of the bill or a minimum of £2 plus 10% of the bill, whichever is greater. If you have any more questions or need further clarification, feel free to ask!
+
+
+
+HOW DO YOU DO MATHS CALCULATIONS IN A WEBSITE?
+
+
+
+-->
+
+
+</form>
+
+<script>
+
+
+// we need to find the element that gets clicked.  
+
+//calcuatoin 1
+// x will equal tip choice whihc is a button to be pressed either 5%, 10% or 25%
+//y will equal total bill which is an input from user.
+
+// z = x x y
+
+//calculation 2
+// za = (x x y) + 2
+
+// we then need an if statment to choose the greater x figure and make it the 'result'.
+
+
+
+// function solve(billValue):{  // fucntion called solve - purpose is to take billvalue from input of user, and use to calculate two tip options anc choose the bigger value.  You don't need to pass billValue as a function argument if you're directly getting it from the DOM.
+
+
+    let billValue = document.getElementById("myInputBox").value;    // assigning a value to billvalue by getting it from the users input box.
+
+    let tipbutton = document.querySelector('input[name="tipcal"]:checked');   //getting the button that was clicked. assigning a new value to the selected box, for reference in next euqation.
+
+    let x = parseFloat(tipbutton.value)/100  // getting the percentage value for the button.  calling it a float so we can turn the value from 5% into 0.05.
+
+// we know the bill value, we know the selected tip percentage.  - we dont need a function for this.
+
+    let z = (billValue*x);     // first equation
+    let za = (x*billValue) +2;  // second equation
+    
+    let result;   
+        if (z > za)           
+            {result = z;}
+        else; 
+            {result = za;}
+        
+    document.getElementById("result").innerhtmml
+// we know the what the tip amount is. = result. we need result to appear in the input box id = "result"
+
+
+
+
+
+
+
+            // if (the button is clicked) and (billValue > 0):
+                
+                
+                
+            //     if (button id = tip1) 
+            //         x = 5%
+            //     elif (button id = tip2)
+            //         X = 10%
+            //     else:
+            //         x = 25%
+            
+            //     z = x*billValue
+            //     za = (x*billValue) +2
+
+            //     if z > za:
+            //         result = z
+            //     else:
+            //         result = za
+
+            //     return result
+            // else:
+                // send error message?
+
+
+
+    // if this button id = tip1 is clicked x = 5%
+    //if this button id = tip2 is clicked x = 10%
+    // if this botton id = tip3 is clicked x = 25%
+
+    // run the first calcution z = x*billValue
+    // run the second caluciont za = (x*billValue)+2
+
+    // if z is > za 
+    //  result = z 
+    // else
+    //  result =  za.
+
+    // return result
+//
+
+
+</script>
+    
+</body>
+</html>
+

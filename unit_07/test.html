@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .grid-container2 {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr); /* 8 columns */
+            gap: 10px; /* Space between the boxes */
+        }
+       .grid-container2 > div {
+            padding: 20px;
+            text-align: center;
+        }
+        .col-1 { background-color: lightcoral; }
+        .col-2 { background-color: lightblue; }
+        .col-3 { background-color: lightgreen; }
+        .col-4 { background-color: lightpink; }
+        .col-5 { background-color: lightyellow; }
+        .col-6 { background-color: lightgray; }
+        .col-7 { background-color: lightgoldenrodyellow; }
+        .col-8 { background-color: lightseagreen; }
+    </style>
+</head>
+<body>
+    <div class="grid-container2">
+        <div class="col-1">1</div>
+        <div class="col-2">2</div>
+        <div class="col-3">3</div>
+        <div class="col-4">4</div>
+        <div class="col-5">5</div>
+        <div class="col-6">6</div>
+        <div class="col-7">7</div>
+        <div class="col-8">8</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+lab 7 redo
+
+
+HTML Elements:
+Definition: HTML elements are the building blocks of HTML documents. They are the tags and their content that define the structure and layout of a web page.
+
+Common HTML elements include <div>, <a>, <p>, <h1>, <img>, and many others.
+
+HTML Objects:
+Definition: HTML objects refer to the objects that represent the HTML elements in the Document Object Model (DOM). When a web page is loaded, the browser creates a DOM that represents the page's structure.
+
+For example, the document.getElementById method returns an object that represents the HTML element with the specified id.
+
+HTML objects have 
+
+properties (e.g., innerHTML, style, className) 
+
+and 
+
+methods (e.g., appendChild(), removeChild(), addEventListener())
+
+Finding an HTML Element:
+
+Finding an HTML element refers to SELECTING an element from the HTML document using methods provided by the DOM.  These methods return references to the elements in the form of HTML objects.
+
+Selects an element based on its id attribute.
+document.getElementById("myId");
+
+Finding an HTML Object:
+
+Finding an HTML object refers to OBTAINING the JavaScript object that represents an HTML element in the DOM.
+
+When you use document.getElementById("myId"), you are finding an HTML element with the specified id. The returned value is an HTML object representing that element.
+This object provides properties and methods to interact with and manipulate the element.
+
+finding an HTML element is the process, and the result is finding the HTML object
+
+
+CONST - A variable defined with the const keyword cannot be reassigned:
+
+
+HTML Events
+An HTML event can be something the browser does, or something a user does.
+
+
+
+
+The document object represents your web page.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+If you want to access any element in an HTML page, you always start with accessing the document object.
+
+eg document.getElementById(id)
+
+
+to change html elements
+
+element.style.property = new style
+
+
+Adding Events Handlers
+
+document.getElementById(id).onclick = function(){code}
+
+
+Finding HTML Objects
+document.body	Returns the <body> element	1
+document.cookie	Returns the document's cookie	1
+document.doctype	Returns the document's doctype	3
+document.documentElement	Returns the <html> element	3
+document.documentMode	Returns the mode used by the browser
+
+
+the idea is you say document then add . to access something, then add the thing. 
+
+document.images 
+
+but it returns images. how return an image? it needs the rest of the command, so the returned image will be used in the next sequence of code.
+
+
+if don't know the element 
+
+document.getElement  
+
+then you need a way to id the element
+
+document.getElementByID  or By Tag or By Class
+
+
+IDs must be unique within an HTML document. 
